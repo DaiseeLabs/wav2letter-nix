@@ -3,7 +3,8 @@
 Tested on x86_64-linux, the nix expression in default.nix should build
 wav2letter++.
 
-The nixpkgs version is pinned in nixpkgs.nix and is overridable. 
+The nixpkgs version is pinned in nixpkgs.nix and config.allowUnfree is set to true for
+you as we use Intel's MKL.
 
 # Prerequisites
 

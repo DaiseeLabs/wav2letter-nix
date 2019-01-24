@@ -1,4 +1,4 @@
-{nixpkgs ? import ./nixpkgs.nix {}}:
+{ nixpkgs ? import ./nixpkgs.nix { config = { allowUnfree = true; }; } }:
 let
   callPackage = nixpkgs.lib.callPackageWith (nixpkgs // pkgs);
   pkgs = {
