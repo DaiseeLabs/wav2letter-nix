@@ -27,7 +27,7 @@ stdenv.mkDerivation rec {
   meta = {
     description = "KenLM: Faster and Smaller Language Model Queries";
     homepage    = "http://kheafield.com/code/kenlm/";
-    license     = licenses.lgpl;
+    license     = licenses.lgpl2;
     platforms   = platforms.all;
     maintainers = with maintainers; [ ];
   };
