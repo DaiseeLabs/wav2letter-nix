@@ -94,7 +94,11 @@ stdenvNoCC.mkDerivation rec {
       threading models.
     '';
     homepage = https://software.intel.com/en-us/mkl;
-    license = licenses.issl;
+    license = {
+      fullName = "Intel Simplified Software License";
+      url = https://software.intel.com/en-us/license/intel-simplified-software-license;
+      free = false;
+    };
     platforms = [ "x86_64-linux" "x86_64-darwin" ];
     maintainers = [ maintainers.bhipple ];
   };
