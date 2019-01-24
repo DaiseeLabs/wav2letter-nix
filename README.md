@@ -7,7 +7,7 @@ The nixpkgs version is pinned in nixpkgs.nix and is overridable.
 
 # Prerequisites
 
-* nix
+* nix (`curl https://nixos.org/nix/install | sh`)
 * probably linux
 
 # Building
