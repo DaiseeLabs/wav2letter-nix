@@ -1,5 +1,11 @@
-{ nixpkgs ? import ./nixpkgs.nix { config = { allowUnfree = true; }; } }:
 let
+  nixpkgs = import ./nixpkgs.nix {
+    config = {
+      allowUnfreePredicate = pkg: builtins.elem (pkg.name) [
+        "mkl-2019.0.117"
+      ];
+    };
+  };
   callPackage = nixpkgs.lib.callPackageWith (nixpkgs // pkgs);
   pkgs = {
     arrayfire = callPackage ./arrayfire.nix { };
